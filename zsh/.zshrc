@@ -1,7 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ENABLE_CORRECTION="true"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
 
 plugins=(
   git
@@ -20,3 +20,10 @@ source ~/dotfiles/.aliases
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_ed25519"
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
