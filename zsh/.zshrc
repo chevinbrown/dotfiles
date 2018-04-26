@@ -4,6 +4,7 @@ ENABLE_CORRECTION="true"
 ZSH_THEME="spaceship"
 
 plugins=(
+  env
   git
   zsh-syntax-highlighting
 )
@@ -27,3 +28,12 @@ prompt spaceship
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+autoload -U add-zsh-hook
+load-local-conf() {
+     # check file exists, is regular file and is readable:
+     if [[ -f .env && -r .env ]]; then
+       source .env
+     fi
+}
+add-zsh-hook chpwd load-local-conf
