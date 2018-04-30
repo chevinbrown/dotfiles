@@ -1,7 +1,10 @@
 export ZSH=$HOME/.oh-my-zsh
 
-ENABLE_CORRECTION="true"
-ZSH_THEME="spaceship"
+ZSH_THEME=""
+
+# Load pure prompt
+autoload -U promptinit; promptinit
+prompt pure
 
 plugins=(
   env
@@ -13,18 +16,14 @@ source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/.aliases
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_ed25519"
-
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
@@ -37,3 +36,8 @@ load-local-conf() {
      fi
 }
 add-zsh-hook chpwd load-local-conf
+
+# Load prompt
+
+autoload -U promptinit; promptinit
+prompt pure
