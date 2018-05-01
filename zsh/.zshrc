@@ -1,10 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
-
-ZSH_THEME=""
-
-# Load pure prompt
-autoload -U promptinit; promptinit
-prompt pure
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
 
 plugins=(
   env
@@ -41,3 +37,9 @@ add-zsh-hook chpwd load-local-conf
 
 autoload -U promptinit; promptinit
 prompt pure
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kevin/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/kevin/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kevin/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/kevin/google-cloud-sdk/completion.zsh.inc'; fi
