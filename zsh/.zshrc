@@ -10,6 +10,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/.aliases
+source ~/dotfiles/.work-aliases
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
