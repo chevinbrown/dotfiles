@@ -1,5 +1,7 @@
 alias be="bundle exec"
 alias cl="clear"
+
+# Git aliases
 alias ga="git add"
 alias gc="git commit"
 alias gca="git commit -am"
@@ -19,6 +21,8 @@ alias grso="git remote show origin"
 alias grro="git remote rm origin"
 alias grest="git reset --hard"
 alias grbm="git rebase origin/master -i"
+alias grbd="git rebase origin/develop -i"
+
 alias hoa="cd ~/code/hoam"
 alias lu="lunchy"
 alias lust="lunchy start"
