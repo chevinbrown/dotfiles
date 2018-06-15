@@ -5,6 +5,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 plugins=(
   env
   git
+  zsh-completions
   zsh-syntax-highlighting
 )
 
@@ -36,7 +37,8 @@ add-zsh-hook chpwd load-local-conf
 
 # Load prompt
 
-autoload -U promptinit; promptinit
+autoload -U promptinit && promptinit;
+autoload -U compinit && compinit;
 prompt pure
 
 # The next line updates PATH for the Google Cloud SDK.
