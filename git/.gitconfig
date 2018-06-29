@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/kbrown/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [commit]
 	verbose = true
 [user]
