@@ -37,8 +37,8 @@ add-zsh-hook chpwd load-local-conf
 
 # Load prompt
 
-autoload -U promptinit && promptinit;
-autoload -U compinit && compinit;
+autoload -U promptinit; promptinit;
+autoload -U compinit; compinit;
 prompt pure
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -46,3 +46,5 @@ if [ -f '/Users/kevin/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/kevi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/kevin/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/kevin/google-cloud-sdk/completion.zsh.inc'; fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
