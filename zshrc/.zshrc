@@ -1,7 +1,9 @@
 export ZSH=$HOME/.oh-my-zsh
+export ZSH_THEME=""
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
-
+export PATH="/Users/kevin/.asdf/shims/npm:$PATH"
+export NODE_PATH="/Users/kevin/.asdf/shims/npm"
 plugins=(
   env
   git
@@ -38,7 +40,7 @@ add-zsh-hook chpwd load-local-conf
 # Load prompt
 
 autoload -U promptinit; promptinit;
-autoload -U compinit; compinit;
+#autoload -U compinit; compinit;
 prompt pure
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -48,3 +50,5 @@ if [ -f '/Users/kevin/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/kevi
 if [ -f '/Users/kevin/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/kevin/google-cloud-sdk/completion.zsh.inc'; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+fpath=(/usr/local/share/zsh-completions $fpath)
