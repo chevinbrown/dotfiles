@@ -45,6 +45,10 @@ autoload -U promptinit; promptinit;
 #autoload -U compinit; compinit;
 prompt pure
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/kevin/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/kevin/google-cloud-sdk/path.zsh.inc'; fi
 
