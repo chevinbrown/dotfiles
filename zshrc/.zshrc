@@ -50,10 +50,10 @@ prompt pure
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kevin/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/kevin/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/kevin/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kevin/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/kevin/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/kevin/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/kevin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kevin/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
