@@ -4,6 +4,8 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export PATH="/Users/kevin/.asdf/shims/npm:$PATH"
 export NODE_PATH="/Users/kevin/.asdf/shims/npm"
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 plugins=(
   env
   git
