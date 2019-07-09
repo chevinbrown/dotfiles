@@ -58,3 +58,5 @@ if [ -f '/Users/kevin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 fpath=(/usr/local/share/zsh-completions $fpath)
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
