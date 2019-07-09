@@ -22,7 +22,7 @@ alias grest="git reset --hard"
 alias grbm="git rebase origin/master -i"
 alias grbd="git rebase origin/develop -i"
 alias gprb="git branch --merged | egrep -v '(^\*|master)' | xargs git branch -d"
-alias gre="git commit -c $(git rev-parse HEAD)"
+alias gane="git add . && git commit --amend --no-edit"
 
 alias noi="npm install"
 alias noig="npm install -g"
