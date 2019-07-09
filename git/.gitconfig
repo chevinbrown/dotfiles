@@ -2,9 +2,11 @@
 	excludesfile = ~/.gitignore_global
 [commit]
 	verbose = true
+	gpgsign = true
 [user]
 	name = Kevin Brown
 	email = chevinbrown@gmail.com
+	signingkey = A726E1E354FBCBA8
 [credential]
 	helper = cache
 
@@ -13,3 +15,5 @@
 
 [rerere]
 	enabled = true
+[gpg]
+	program = gpg
