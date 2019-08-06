@@ -13,6 +13,9 @@
 [color]
 	ui = auto
 
+[alias]
+  fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
+
 [rerere]
 	enabled = true
 [gpg]
