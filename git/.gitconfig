@@ -6,7 +6,7 @@
 [user]
 	name = Kevin Brown
 	email = chevinbrown@gmail.com
-	signingkey = A726E1E354FBCBA8
+	signingkey = 71DE36B5C43E38E1
 [credential]
 	helper = cache
 
