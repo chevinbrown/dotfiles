@@ -40,3 +40,5 @@ alias rdm="rails db:migrate"
 
 # General
 alias src="source ~/.zshrc"
+alias nv="nvim"
+
