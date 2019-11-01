@@ -27,6 +27,9 @@ fi
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_ed25519"
 
+# gpg
+export GPG_TTY='tty'
+
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
