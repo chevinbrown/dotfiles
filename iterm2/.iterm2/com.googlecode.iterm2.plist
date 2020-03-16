@@ -4,6 +4,8 @@
 <dict>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
+	<key>ApplePressAndHoldEnabled</key>
+	<false/>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -287,9 +289,9 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>1783 765 400 129 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 788 620 392 0 0 2560 1417 </string>
+	<string>970 787 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 988 2560 429 0 0 2560 1417 </string>
+	<string>0 548 1680 479 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -928,6 +930,7 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.6</string>
+		<string>3.3.8</string>
 		<string>3.3.1</string>
 		<string>3.3.3</string>
 		<string>3.3.5</string>
@@ -945,7 +948,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>38A488AB-70E9-4607-BF83-9FA78D0F66D1</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>65</integer>
+	<integer>69</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1662,23 +1665,6 @@
 			</dict>
 		</array>
 	</dict>
-	<key>NoSyncSearchHistory</key>
-	<array>
-		<string>_widgets.html</string>
-	</array>
-	<key>NoSyncSearchHistory2</key>
-	<array>
-		<string>en1</string>
-		<string>form_modal</string>
-		<string>modal</string>
-		<string>arguments</string>
-		<string>select</string>
-		<string>assign</string>
-		<string>daysEarlypara</string>
-		<string>params</string>
-		<string>days_</string>
-		<string>hour_of_day</string>
-	</array>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>587510580.53975701</real>
 	<key>OnlyWhenMoreTabs</key>
@@ -1735,7 +1721,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-01-09T19:36:48Z</date>
+	<date>2020-02-04T21:03:50Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -1753,6 +1739,6 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.7</string>
+	<string>3.3.8</string>
 </dict>
 </plist>
