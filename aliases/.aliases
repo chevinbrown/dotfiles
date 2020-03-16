@@ -1,6 +1,7 @@
 alias be="bundle exec"
 alias cl="clear"
 
+alias g="git"
 # Git aliases
 alias ga="git add"
 alias gc="git commit"
@@ -41,4 +42,3 @@ alias rdm="rails db:migrate"
 # General
 alias src="source ~/.zshrc"
 alias nv="nvim"
-

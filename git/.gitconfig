@@ -15,6 +15,16 @@
 	ui = auto
 
 [alias]
+  a = "add"
+  b = "branch"
+  c = "commit"
+  ca = "commit -am"
+  ch = "checkout"
+  fph = "push origin"
+  fam = "! git fetch origin && git merge origin/master --ff-only"
+  po = "push origin head"
+  l = "log"
+  s = "status"
   fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
 
 [rerere]

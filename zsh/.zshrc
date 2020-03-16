@@ -63,3 +63,6 @@ if [ -f '/Users/kevin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '
 fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
