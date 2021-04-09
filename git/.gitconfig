@@ -20,12 +20,14 @@
   c = "commit"
   ca = "commit -am"
   ch = "checkout"
-  fph = "push origin"
+  cm = "checkout master"
   fam = "! git fetch origin && git merge origin/master --ff-only"
-  po = "push origin head"
-  l = "log"
-  s = "status"
+  fph = "push origin"
   fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
+  l = "log"
+  po = "push origin head"
+  prb = "! git branch --merged | egrep -v '(^\\*|master)' | xargs git branch -d"
+  s = "status"
 
 [rerere]
 	enabled = true
