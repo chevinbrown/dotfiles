@@ -1,24 +1,12 @@
 alias be="bundle exec"
-alias cl="clear"
 
 alias g="git"
 # Git aliases
 alias gm="git merge"
 alias gp="git push"
-#alias gpo="git push origin"
-#alias gfam="git fetch origin && git merge origin/master --ff-only"
 alias grest="git reset --hard"
 alias grbm="git rebase origin/master -i"
-alias gprb="git branch --merged | egrep -v '(^\*|master)' | xargs git branch -d"
 alias gane="git add . && git commit --amend --no-edit"
-
-# Rails
-alias rc="rails console"
-alias rgc="rails generate controller"
-alias rgmo="rails generate model"
-alias rgmi="rails generate migration"
-alias rs="rails server"
-alias rdm="rails db:migrate"
 
 # General
 alias src="source ~/.zshrc"
