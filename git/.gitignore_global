@@ -1,3 +1,9 @@
 .env
 .tool-versions
 __pycache__
+.DS_Store
+.rufo
+*.vscode
+.elixir_ls/
+.codegpt
+
