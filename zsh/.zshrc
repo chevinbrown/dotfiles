@@ -1,3 +1,10 @@
+# Load prompt
+fpath+=$HOME/.zsh/pure
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+
+autoload -U promptinit; promptinit;
+prompt pure
+
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME=""
 export CLICOLOR=1
@@ -7,7 +14,6 @@ export NODE_PATH="/Users/kevin/.asdf/shims/npm"
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 plugins=(
-  env
   git
   zsh-completions
   zsh-syntax-highlighting
@@ -24,45 +30,17 @@ else
   export EDITOR='nvim'
 fi
 
-# ssh
-export SSH_KEY_PATH="~/.ssh/id_ed25519"
+. /opt/homebrew/opt/asdf/etc/bash_completion.d/asdf
 
-# gpg
-export GPG_TTY='tty'
-
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
-autoload -U add-zsh-hook
 load-local-conf() {
      # check file exists, is regular file and is readable:
      if [[ -f .env && -r .env ]]; then
        source .env
      fi
 }
-add-zsh-hook chpwd load-local-conf
-
-# Load prompt
-
-autoload -U promptinit; promptinit;
-#autoload -U compinit; compinit;
-prompt pure
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-fpath=(/usr/local/share/zsh-completions $fpath)
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kevin/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kevin/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/kevin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kevin/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-fpath=(/usr/local/share/zsh-completions $fpath)
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/vault vault
-export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
