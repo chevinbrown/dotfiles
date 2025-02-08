@@ -2,7 +2,11 @@
 call plug#begin('~/.config/nvim/bundle')
 
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'kaicataldo/material.vim'
+Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
+Plug 'navarasu/onedark.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'tpope/vim-surround'
+Plug 'ThePrimeagen/vim-be-good'
 
 call plug#end()
 
@@ -12,7 +16,8 @@ call plug#end()
 
 " Color
 set termguicolors
-colorscheme material
+set relativenumber
+colorscheme onedark
 syntax on
 
 "=============================================
