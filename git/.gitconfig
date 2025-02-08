@@ -1,13 +1,15 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = nvim
+[includeIf "hasconfig:remote.*.url:https://gitlab.com"]
+	path = .gitconfig.work
 [commit]
 	verbose = true
 	gpgsign = true
 [user]
 	name = Kevin Brown
 	email = chevinbrown@gmail.com
-	signingkey = 71DE36B5C43E38E1
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJYKhhN0iN7/eG5VnwM3cstvK9gs4GSSBPOweUb/sVVN kevin@loki
 [credential]
 	helper = cache
 
@@ -26,10 +28,11 @@
   fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
   l = "log"
   po = "push origin head"
-  prb = "! git branch --merged | egrep -v '(^\\*|master)' | xargs git branch -d"
+  prb = "! git branch --merged | egrep -v '(^\\*|master|develop|main)' | xargs git branch -d"
   s = "status"
 
 [rerere]
 	enabled = true
 [gpg]
 	program = gpg
+	format = ssh
