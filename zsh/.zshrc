@@ -1,6 +1,7 @@
 # Load prompt
 fpath+=$HOME/.zsh/pure
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 
 autoload -U promptinit; promptinit;
 prompt pure
@@ -12,8 +13,10 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 export PATH="/Users/kevin/.asdf/shims/npm:$PATH"
 export NODE_PATH="/Users/kevin/.asdf/shims/npm"
 export ERL_AFLAGS="-kernel shell_history enabled"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 plugins=(
+  asdf
   git
   zsh-completions
   zsh-syntax-highlighting
@@ -30,8 +33,6 @@ else
   export EDITOR='nvim'
 fi
 
-. /opt/homebrew/opt/asdf/etc/bash_completion.d/asdf
-
 load-local-conf() {
      # check file exists, is regular file and is readable:
      if [[ -f .env && -r .env ]]; then
@@ -41,6 +42,3 @@ load-local-conf() {
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
