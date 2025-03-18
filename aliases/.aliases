@@ -6,8 +6,10 @@ alias gm="git merge"
 alias gp="git push"
 alias grest="git reset --hard"
 alias grbm="git rebase origin/master -i"
+alias grbmain="git rebase origin/main -i"
 alias gane="git add . && git commit --amend --no-edit"
 
 # General
 alias src="source ~/.zshrc"
 alias nv="nvim"
+alias utmost="curl -s https://utmost.org | htmlq --text .post-content | fold -w 120 -s"
