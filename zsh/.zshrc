@@ -1,5 +1,6 @@
 # Load prompt
-fpath+=$HOME/.zsh/pure
+fpath+=/opt/homebrew/opt/zsh-async/share/zsh/site-functions
+fpath+=/opt/homebrew/opt/pure/share/zsh/site-functions
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 
