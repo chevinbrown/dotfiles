@@ -1,15 +1,13 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = nvim
-[includeIf "hasconfig:remote.*.url:https://gitlab.com"]
-	path = .gitconfig.work
 [commit]
 	verbose = true
 	gpgsign = true
 [user]
 	name = Kevin Brown
 	email = chevinbrown@gmail.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJYKhhN0iN7/eG5VnwM3cstvK9gs4GSSBPOweUb/sVVN kevin@loki
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3oeVQSeeqYVQ2YriCuvj+DQvpO6Av3BZX7JdG1ABGD chevinbrown@gmail.com
 [credential]
 	helper = cache
 
