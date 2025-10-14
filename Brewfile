@@ -18,7 +18,6 @@ brew "ripgrep"
 brew "stow"
 
 cask "1password"
-cask "alfred"
 cask "discord"
 cask "kitty"
 cask "loom"
