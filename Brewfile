@@ -8,6 +8,7 @@ brew "git"
 brew "gnupg"
 brew "nvim"
 brew "openssl"
+brew "pure"
 brew "ripgrep"
 brew "stow"
 
