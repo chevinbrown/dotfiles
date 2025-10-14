@@ -1,8 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/core"
-
 brew "asdf"
 brew "autoconf"
 brew "bash"
