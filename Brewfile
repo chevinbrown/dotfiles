@@ -17,6 +17,7 @@ brew "pkgconf"
 brew "pure"
 brew "ripgrep"
 brew "stow"
+brew "zsh-async"
 brew "zsh-autosuggestions"
 
 cask "1password"
