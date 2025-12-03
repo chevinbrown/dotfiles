@@ -7,7 +7,7 @@
 [user]
 	name = Kevin Brown
 	email = chevinbrown@gmail.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3oeVQSeeqYVQ2YriCuvj+DQvpO6Av3BZX7JdG1ABGD chevinbrown@gmail.com
+	signingkey = 46E15E75D26DA318
 [credential]
 	helper = cache
 
@@ -33,4 +33,4 @@
 	enabled = true
 [gpg]
 	program = gpg
-	format = ssh
+	format = openpgp
