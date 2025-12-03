@@ -16,7 +16,6 @@ export ZSH_THEME=""
 
 plugins=(
   asdf
-  autoenv
   git
   zsh-completions
   zsh-syntax-highlighting
@@ -52,17 +51,36 @@ fi
 # ----------------------------------------------------------------------------
 # Custom Functions
 # ----------------------------------------------------------------------------
-load-local-conf() {
-  # Source .env file if it exists and is readable
+# Automatically source .env files when entering directories
+autoload_dotenv() {
   if [[ -f .env && -r .env ]]; then
-    source .env
+    # Source silently by redirecting output
+    source .env &>/dev/null
   fi
 }
+
+# Run when changing directories
+autoload -U add-zsh-hook
+add-zsh-hook chpwd autoload_dotenv
+
+# Also run on shell startup
+autoload_dotenv
 
 # ----------------------------------------------------------------------------
 # External Integrations
 # ----------------------------------------------------------------------------
+# FZF fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Atuin shell history
+if command -v atuin &> /dev/null; then
+  eval "$(atuin init zsh)"
+fi
+
+# Zsh autosuggestions from Homebrew
+if [ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
 # ----------------------------------------------------------------------------
 # Aliases
